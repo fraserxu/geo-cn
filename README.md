@@ -3,7 +3,8 @@ geo-cn
 
 ### What?
 
-![cn.png](https://raw.githubusercontent.com/fraserxu/geo-cn/master/cn.png)
+See preview here: https://github.com/fraserxu/geo-cn/blob/master/datas/cn.json
+
 You may only need to care about `datas/cn.json` file here.
 
 ### Why?
