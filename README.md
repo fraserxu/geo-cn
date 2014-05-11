@@ -3,9 +3,13 @@ geo-cn
 
 ### What?
 
-See preview here: https://github.com/fraserxu/geo-cn/blob/master/datas/cn.json
+This repository conatin the following file:
 
-You may only need to care about `datas/cn.json` file here.
+* **cn.json** - shape files + places data
+* **places.json** - Major cites in China
+* **subunits.json** - China cartographic boundaries
+
+See preview here: https://github.com/fraserxu/geo-cn/blob/master/datas/cn.json
 
 ### Why?
 
