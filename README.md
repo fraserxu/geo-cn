@@ -1,6 +1,11 @@
 geo-cn
 =======
 
+### What?
+
+![cn.png](https://raw.githubusercontent.com/fraserxu/geo-cn/master/cn.png)
+You may only need to care about `datas/cn.json` file here.
+
 ### Why?
 
 I wanted to build a map with [d3.js](http://d3js.org/), and I followed up this post [Let’s Make a Map](http://bost.ocks.org/mike/map/). But after get started, I finded it hard to get the needed map data for me, especially for a country like China.
@@ -52,3 +57,7 @@ You can download the complete file from [Admin 0 - Details - map subunits](http:
     subunits.json \
     places.json
   ```
+
+### license
+
+MIT
