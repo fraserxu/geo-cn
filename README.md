@@ -14,13 +14,16 @@ You can download the complete file from [Admin 0 - Details - map subunits](http:
 ### Tooling
 
 * gdal([Geospatial Data Abstraction Library](http://www.gdal.org/))
+
   `brew install gdal`
 * topjson([TopoJSON](https://github.com/mbostock/topojson))
+
   `npm install -g topjson`
 
 ### Converting Data
 
 * create `subunits.json` GeoJSON file(here including **Hongkong**, **Taiwan** and **Macau**):
+
   ```
   ogr2ogr \
     -f GeoJSON \
@@ -28,12 +31,24 @@ You can download the complete file from [Admin 0 - Details - map subunits](http:
     subunits.json \
     ne_10m_admin_0_map_subunits.shp
   ```
-* create `places.json`
+* create `places.json` GeoJSON file
+
   ```
-ogr2ogr \
-  -f GeoJSON \
-  -where "ISO_A2 = 'CN' AND SCALERANK < 8" \
-  places.json \
-  ne_10m_populated_places.shp
+  ogr2ogr \
+    -f GeoJSON \
+    -where "ISO_A2 IN ('CN', 'HK', 'TW', 'MO') AND SCALERANK < 8" \
+    places.json \
+    ne_10m_populated_places.shp
   ```
 
+* generate `cn.json` file
+
+  ```
+  topojson \
+    -o cn.json \
+    --id-property SU_A3 \
+    --properties name=NAME \
+    -- \
+    subunits.json \
+    places.json
+  ```
